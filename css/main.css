@@ -108,6 +108,9 @@
   .align-right{
     text-align: right;
   }
+  .align-left{
+    text-align: left;
+  }
 
   .inline{
     display: inline-block;
