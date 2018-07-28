@@ -29,9 +29,7 @@ var WorldScholars = window.WorldScholars || {};
         userPool.getCurrentUser().signOut();
     };
 
-    WorldScholars.user = function getUser() {
-        userPool.getCurrentUser();
-    };
+    WorldScholars.user = userPool.getCurrentUser();
 
     WorldScholars.authToken = new Promise(function fetchCurrentAuthToken(resolve, reject) {
         var cognitoUser = userPool.getCurrentUser();
