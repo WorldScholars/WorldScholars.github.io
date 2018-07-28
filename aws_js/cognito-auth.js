@@ -29,6 +29,10 @@ var WorldScholars = window.WorldScholars || {};
         userPool.getCurrentUser().signOut();
     };
 
+    WorldScholars.user = function getUser() {
+        userPool.getCurrentUser();
+    };
+
     WorldScholars.authToken = new Promise(function fetchCurrentAuthToken(resolve, reject) {
         var cognitoUser = userPool.getCurrentUser();
 
@@ -121,7 +125,7 @@ var WorldScholars = window.WorldScholars || {};
         signin(email, password,
             function signinSuccess() {
                 console.log('Successfully Logged In');
-                window.location.href = 'ride.html';
+                window.location.href = 'profile.html';
             },
             function signinError(err) {
                 alert(err);
