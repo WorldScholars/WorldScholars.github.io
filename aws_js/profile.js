@@ -56,7 +56,7 @@ WorldScholars.map = WorldScholars.map || {};
         // get profile
         //requestProfile();
         var useremail = document.getElementById('useremail');
-        useremail.innerHTML = WorldScholars.user;
+        useremail.innerHTML = WorldScholars.user.username;
         
     });
 
