@@ -166,18 +166,6 @@
                                 <input type="submit" value="Sign up">
                             </form>
                         </section>
-                        <script type="text/javascript" src="aws_js/vendor/jquery-3.1.0.js">
-                        </script>
-                        <script type="text/javascript" src="aws_js/vendor/bootstrap.min.js">
-                        </script>
-                        <script type="text/javascript" src="aws_js/vendor/aws-cognito-sdk.min.js">
-                        </script>
-                        <script type="text/javascript" src="aws_js/vendor/amazon-cognito-identity.min.js">
-                        </script>
-                        <script type="text/javascript" src="aws_js/config.js">
-                        </script>
-                        <script type="text/javascript" src="aws_js/cognito-auth.js">
-                        </script>
                     </div>
                 </div>
             </div>
@@ -269,7 +257,24 @@
             $( function() { $( "form" ).sisyphus(); });
         </script>
         <script type="text/javascript">
-            $('#scantronForm input').click(function () {  console.log($(this).attr('name') + ","+ $(this).val() + "," + Date.now()); });
+            $('#scantronForm input').click(function () {
+  //Localstorage only stores strings, so we convert between json
+  var clicks = JSON.parse(localStorage.getItem('clicks')) || [] ;
+
+  var oneClick = {
+    question: $(this).attr('name'),
+    answer: $(this).val(),
+    timestamp: Date.now()
+  }
+  
+  clicks.push(oneClick)
+  localStorage.setItem('clicks', JSON.stringify(clicks));
+});
+
+$( "#scantronForm" ).submit(function( event ) {
+  localStorage.removeItem('clicks');
+});
+
         </script>
     </body>
 </html>
