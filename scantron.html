@@ -15,7 +15,6 @@
         <link href="css/lightbox.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
-        <link href="css/pretty-checkbox.min.css" rel="stylesheet">
         <link rel="shortcut icon" href="images/ico/favicon.ico">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -30,6 +29,18 @@
         gtag('config', 'UA-111625545-1');
         </script>
 
+        <script type="text/javascript" src="aws_js/vendor/jquery-3.1.0.js">
+        </script>
+        <script type="text/javascript" src="aws_js/vendor/bootstrap.min.js">
+        </script>
+        <script type="text/javascript" src="aws_js/vendor/aws-cognito-sdk.min.js">
+        </script>
+        <script type="text/javascript" src="aws_js/vendor/amazon-cognito-identity.min.js">
+        </script>
+        <script type="text/javascript" src="aws_js/config.js">
+        </script>
+        <script type="text/javascript" src="aws_js/cognito-auth.js">
+        </script>
     </head>
     <body>
         <header id="header">
@@ -145,384 +156,222 @@
                             <h1>
                                 Scantron
                             </h1>
-                            <form id="scantronForm">
+                            <form id="scantronForm" name="scantronForm">
                                 <span>
                                     Q1 :
                                 </span>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_1">
-                                    <div class="state">
-                                        <label>
-                                            A
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_1">
-                                    <div class="state">
-                                        <label>
-                                            B
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_1">
-                                    <div class="state">
-                                        <label>
-                                            C
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_1">
-                                    <div class="state">
-                                        <label>
-                                            D
-                                        </label>
-                                    </div>
-                                </div>
+                                <input type="radio" id="A" value="A" name="question_1">
+                                <label for="A">
+                                    A
+                                </label>
+                                <input type="radio" id="B" value="B" name="question_1">
+                                <label for="B">
+                                    B
+                                </label>
+                                <input type="radio" id="C" value="C" name="question_1">
+                                <label for="C">
+                                    C
+                                </label>
+                                <input type="radio" id="D" value="D" name="question_1">
+                                <label for="D">
+                                    D
+                                </label>
+                                <br>
                                 <br>
                                 <span>
                                     Q2 :
                                 </span>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_2">
-                                    <div class="state">
-                                        <label>
-                                            A
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_2">
-                                    <div class="state">
-                                        <label>
-                                            B
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_2">
-                                    <div class="state">
-                                        <label>
-                                            C
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_2">
-                                    <div class="state">
-                                        <label>
-                                            D
-                                        </label>
-                                    </div>
-                                </div>
+                                <input type="radio" id="A" value="A" name="question_2">
+                                <label for="A">
+                                    A
+                                </label>
+                                <input type="radio" id="B" value="B" name="question_2">
+                                <label for="B">
+                                    B
+                                </label>
+                                <input type="radio" id="C" value="C" name="question_2">
+                                <label for="C">
+                                    C
+                                </label>
+                                <input type="radio" id="D" value="D" name="question_2">
+                                <label for="D">
+                                    D
+                                </label>
+                                <br>
                                 <br>
                                 <span>
                                     Q3 :
                                 </span>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_3">
-                                    <div class="state">
-                                        <label>
-                                            A
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_3">
-                                    <div class="state">
-                                        <label>
-                                            B
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_3">
-                                    <div class="state">
-                                        <label>
-                                            C
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_3">
-                                    <div class="state">
-                                        <label>
-                                            D
-                                        </label>
-                                    </div>
-                                </div>
+                                <input type="radio" id="A" value="A" name="question_3">
+                                <label for="A">
+                                    A
+                                </label>
+                                <input type="radio" id="B" value="B" name="question_3">
+                                <label for="B">
+                                    B
+                                </label>
+                                <input type="radio" id="C" value="C" name="question_3">
+                                <label for="C">
+                                    C
+                                </label>
+                                <input type="radio" id="D" value="D" name="question_3">
+                                <label for="D">
+                                    D
+                                </label>
+                                <br>
                                 <br>
                                 <span>
                                     Q4 :
                                 </span>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_4">
-                                    <div class="state">
-                                        <label>
-                                            A
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_4">
-                                    <div class="state">
-                                        <label>
-                                            B
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_4">
-                                    <div class="state">
-                                        <label>
-                                            C
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_4">
-                                    <div class="state">
-                                        <label>
-                                            D
-                                        </label>
-                                    </div>
-                                </div>
+                                <input type="radio" id="A" value="A" name="question_4">
+                                <label for="A">
+                                    A
+                                </label>
+                                <input type="radio" id="B" value="B" name="question_4">
+                                <label for="B">
+                                    B
+                                </label>
+                                <input type="radio" id="C" value="C" name="question_4">
+                                <label for="C">
+                                    C
+                                </label>
+                                <input type="radio" id="D" value="D" name="question_4">
+                                <label for="D">
+                                    D
+                                </label>
+                                <br>
                                 <br>
                                 <span>
                                     Q5 :
                                 </span>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_5">
-                                    <div class="state">
-                                        <label>
-                                            A
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_5">
-                                    <div class="state">
-                                        <label>
-                                            B
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_5">
-                                    <div class="state">
-                                        <label>
-                                            C
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_5">
-                                    <div class="state">
-                                        <label>
-                                            D
-                                        </label>
-                                    </div>
-                                </div>
+                                <input type="radio" id="A" value="A" name="question_5">
+                                <label for="A">
+                                    A
+                                </label>
+                                <input type="radio" id="B" value="B" name="question_5">
+                                <label for="B">
+                                    B
+                                </label>
+                                <input type="radio" id="C" value="C" name="question_5">
+                                <label for="C">
+                                    C
+                                </label>
+                                <input type="radio" id="D" value="D" name="question_5">
+                                <label for="D">
+                                    D
+                                </label>
+                                <br>
                                 <br>
                                 <span>
                                     Q6 :
                                 </span>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_6">
-                                    <div class="state">
-                                        <label>
-                                            A
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_6">
-                                    <div class="state">
-                                        <label>
-                                            B
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_6">
-                                    <div class="state">
-                                        <label>
-                                            C
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_6">
-                                    <div class="state">
-                                        <label>
-                                            D
-                                        </label>
-                                    </div>
-                                </div>
+                                <input type="radio" id="A" value="A" name="question_6">
+                                <label for="A">
+                                    A
+                                </label>
+                                <input type="radio" id="B" value="B" name="question_6">
+                                <label for="B">
+                                    B
+                                </label>
+                                <input type="radio" id="C" value="C" name="question_6">
+                                <label for="C">
+                                    C
+                                </label>
+                                <input type="radio" id="D" value="D" name="question_6">
+                                <label for="D">
+                                    D
+                                </label>
+                                <br>
                                 <br>
                                 <span>
                                     Q7 :
                                 </span>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_7">
-                                    <div class="state">
-                                        <label>
-                                            A
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_7">
-                                    <div class="state">
-                                        <label>
-                                            B
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_7">
-                                    <div class="state">
-                                        <label>
-                                            C
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_7">
-                                    <div class="state">
-                                        <label>
-                                            D
-                                        </label>
-                                    </div>
-                                </div>
+                                <input type="radio" id="A" value="A" name="question_7">
+                                <label for="A">
+                                    A
+                                </label>
+                                <input type="radio" id="B" value="B" name="question_7">
+                                <label for="B">
+                                    B
+                                </label>
+                                <input type="radio" id="C" value="C" name="question_7">
+                                <label for="C">
+                                    C
+                                </label>
+                                <input type="radio" id="D" value="D" name="question_7">
+                                <label for="D">
+                                    D
+                                </label>
+                                <br>
                                 <br>
                                 <span>
                                     Q8 :
                                 </span>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_8">
-                                    <div class="state">
-                                        <label>
-                                            A
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_8">
-                                    <div class="state">
-                                        <label>
-                                            B
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_8">
-                                    <div class="state">
-                                        <label>
-                                            C
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_8">
-                                    <div class="state">
-                                        <label>
-                                            D
-                                        </label>
-                                    </div>
-                                </div>
+                                <input type="radio" id="A" value="A" name="question_8">
+                                <label for="A">
+                                    A
+                                </label>
+                                <input type="radio" id="B" value="B" name="question_8">
+                                <label for="B">
+                                    B
+                                </label>
+                                <input type="radio" id="C" value="C" name="question_8">
+                                <label for="C">
+                                    C
+                                </label>
+                                <input type="radio" id="D" value="D" name="question_8">
+                                <label for="D">
+                                    D
+                                </label>
+                                <br>
                                 <br>
                                 <span>
                                     Q9 :
                                 </span>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_9">
-                                    <div class="state">
-                                        <label>
-                                            A
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_9">
-                                    <div class="state">
-                                        <label>
-                                            B
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_9">
-                                    <div class="state">
-                                        <label>
-                                            C
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_9">
-                                    <div class="state">
-                                        <label>
-                                            D
-                                        </label>
-                                    </div>
-                                </div>
+                                <input type="radio" id="A" value="A" name="question_9">
+                                <label for="A">
+                                    A
+                                </label>
+                                <input type="radio" id="B" value="B" name="question_9">
+                                <label for="B">
+                                    B
+                                </label>
+                                <input type="radio" id="C" value="C" name="question_9">
+                                <label for="C">
+                                    C
+                                </label>
+                                <input type="radio" id="D" value="D" name="question_9">
+                                <label for="D">
+                                    D
+                                </label>
+                                <br>
                                 <br>
                                 <span>
                                     Q10 :
                                 </span>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_10">
-                                    <div class="state">
-                                        <label>
-                                            A
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_10">
-                                    <div class="state">
-                                        <label>
-                                            B
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_10">
-                                    <div class="state">
-                                        <label>
-                                            C
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pretty p-default p-fill p-round p-pulse">
-                                    <input type="radio" name="question_10">
-                                    <div class="state">
-                                        <label>
-                                            D
-                                        </label>
-                                    </div>
-                                </div>
+                                <input type="radio" id="A" value="A" name="question_10">
+                                <label for="A">
+                                    A
+                                </label>
+                                <input type="radio" id="B" value="B" name="question_10">
+                                <label for="B">
+                                    B
+                                </label>
+                                <input type="radio" id="C" value="C" name="question_10">
+                                <label for="C">
+                                    C
+                                </label>
+                                <input type="radio" id="D" value="D" name="question_10">
+                                <label for="D">
+                                    D
+                                </label>
                                 <br>
+                                <br>
+                                <button class="btn btn-primary" name="button" type="submit">
+                                    submit
+                                </button>
                             </form>
                         </section>
-                        <script type="text/javascript" src="aws_js/vendor/jquery-3.1.0.js">
-                        </script>
-                        <script type="text/javascript" src="aws_js/vendor/bootstrap.min.js">
-                        </script>
-                        <script type="text/javascript" src="aws_js/vendor/aws-cognito-sdk.min.js">
-                        </script>
-                        <script type="text/javascript" src="aws_js/vendor/amazon-cognito-identity.min.js">
-                        </script>
-                        <script type="text/javascript" src="aws_js/config.js">
-                        </script>
-                        <script type="text/javascript" src="aws_js/cognito-auth.js">
-                        </script>
-                        <script type="text/javascript">
-                            $( function() { $('#scantronForm').sisyphus(); });
-                        </script>
                     </div>
                 </div>
             </div>
@@ -609,6 +458,12 @@
         <script type="text/javascript" src="js/main.js">
         </script>
         <script type="text/javascript" src="js/sisyphus.js">
+        </script>
+        <script type="text/javascript">
+            $( function() { $( "form" ).sisyphus(); });
+        </script>
+        <script type="text/javascript">
+            $('#scantronForm input').click(function () {  console.log($(this).attr('name') + ","+ $(this).val() + "," + Date.now()); });
         </script>
     </body>
 </html>
