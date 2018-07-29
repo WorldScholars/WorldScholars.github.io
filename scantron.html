@@ -145,7 +145,7 @@
                             <h1>
                                 Scantron
                             </h1>
-                            <form id="scantronForm" data-persist="garlic">
+                            <form id="scantronForm">
                                 <span>
                                     Q1 :
                                 </span>
@@ -520,6 +520,9 @@
                         </script>
                         <script type="text/javascript" src="aws_js/cognito-auth.js">
                         </script>
+                        <script type="text/javascript">
+                            $( function() { $('#scantronForm').sisyphus(); });
+                        </script>
                     </div>
                 </div>
             </div>
@@ -605,7 +608,7 @@
         </script>
         <script type="text/javascript" src="js/main.js">
         </script>
-        <script type="text/javascript" src="js/garlic.min.js">
+        <script type="text/javascript" src="js/sisyphus.js">
         </script>
     </body>
 </html>
