@@ -29,8 +29,6 @@ WorldScholars.map = WorldScholars.map || {};
           var useremail = document.getElementById('username');
           useremail.innerHTML = WorldScholars.user.username;
         }
-        if (window.location.pathname=="/scantron.html"){
-          writeExam();
         }
     });
 
