@@ -30,6 +30,6 @@ WorldScholars.map = WorldScholars.map || {};
           useremail.innerHTML = WorldScholars.user.username;
         }
         }
-    });
+    );
 
 }(jQuery));
