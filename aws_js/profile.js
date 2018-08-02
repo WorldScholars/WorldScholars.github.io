@@ -15,36 +15,6 @@ WorldScholars.map = WorldScholars.map || {};
         alert(error);
         window.location.href = '/signin.html';
     });
-
-    function requestProfile() {
-        $.ajax({
-            method: 'GET',
-            url: _config.api.invokeUrl + '/getProfile',
-            headers: {
-                Authorization: authToken
-            },
-            data: JSON.stringify({
-                PickupLocation: {
-                    Latitude: pickupLocation.latitude,
-                    Longitude: pickupLocation.longitude
-                }
-            }),
-            contentType: 'application/json',
-            success: completeRequest,
-            error: function ajaxError(jqXHR, textStatus, errorThrown) {
-                console.error('Error getting profile: ', textStatus, ', Details: ', errorThrown);
-                console.error('Response: ', jqXHR.responseText);
-                alert('An error occured when requesting your profile:\n' + jqXHR.responseText);
-            }
-        });
-    }
-
-    function completeRequest(result) {
-        console.log('Response received from API: ', result);
-        var useremail = document.getElementById('useremail');
-        useremail.innerHTML = result.ProfileInfo.email;
-    }
-
     $(function onDocReady() {
         // register handler for signout click
         $('#signOut').click(function() {
@@ -52,12 +22,15 @@ WorldScholars.map = WorldScholars.map || {};
             alert("You have been signed out.");
             window.location = "signin.html";
         });
-   
-        // get profile
-        //requestProfile();
-        var useremail = document.getElementById('username');
-        useremail.innerHTML = WorldScholars.user.username;
-        
+  
+        //TODO figure out how to split this into multiple files 
+        if (window.location.pathname="/profile.html"){
+          var useremail = document.getElementById('username');
+          useremail.innerHTML = WorldScholars.user.username;
+        }
+        if (window.location.pathname="/scantron.html"){
+          writeExam();
+        }
     });
 
 }(jQuery));
