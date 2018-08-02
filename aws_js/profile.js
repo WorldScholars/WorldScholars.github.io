@@ -15,6 +15,7 @@ WorldScholars.map = WorldScholars.map || {};
         alert(error);
         window.location.href = '/signin.html';
     });
+
     $(function onDocReady() {
         // register handler for signout click
         $('#signOut').click(function() {
@@ -24,11 +25,11 @@ WorldScholars.map = WorldScholars.map || {};
         });
   
         //TODO figure out how to split this into multiple files 
-        if (window.location.pathname="/profile.html"){
+        if (window.location.pathname=="/profile.html"){
           var useremail = document.getElementById('username');
           useremail.innerHTML = WorldScholars.user.username;
         }
-        if (window.location.pathname="/scantron.html"){
+        if (window.location.pathname=="/scantron.html"){
           writeExam();
         }
     });
