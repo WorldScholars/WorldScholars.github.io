@@ -2333,7 +2333,10 @@ table, td, th {
 }
 
 .answer-table {
-  border: none;
+  border: double;
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
   margin-top: 18px;
   margin-bottom: 16px;
   margin-left: auto;
