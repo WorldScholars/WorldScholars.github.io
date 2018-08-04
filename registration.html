@@ -375,7 +375,10 @@ function uuidv4() {
   )
 }
 
-$('#scantronForm input').click(function () {
+
+        </script>
+        <script type="text/javascript">
+            $('#scantronForm input').click(function () {
   //Localstorage only stores strings, so we convert between json
   var clicks = JSON.parse(localStorage.getItem('clicks')) || [] ;
 
@@ -398,8 +401,8 @@ $('#scantronForm input').click(function () {
 });
 
 (function rideScopeWrapper($) {
+    // TODO how can i break this part into a sepearate file? it is repeated across the code base atm
     var authToken;
-    console.log(window.location.origin == "file://")
     WorldScholars.authToken.then(function setAuthToken(token) {
         if (token || (window.location.origin == "file://")) {
             authToken = token;
@@ -413,9 +416,9 @@ $('#scantronForm input').click(function () {
 
     function writeExam(event) {
         event.preventDefault();
-        console.log(JSON.stringify($('#scantronForm').serializeArray()));
-        console.log(localStorage.getItem('clicks'));
-        console.log(authToken);
+        //console.log(JSON.stringify($('#scantronForm').serializeArray()));
+        //console.log(localStorage.getItem('clicks'));
+        //console.log(authToken);
 
         $.ajax({
             method: 'POST',
