@@ -380,7 +380,7 @@ function uuidv4() {
         <script type="text/javascript">
             $('#scantronForm input').click(function () {
   //Localstorage only stores strings, so we convert between json
-  var clicks = JSON.parse(localStorage.getItem('clicks')) || [] ;
+  var clicks = JSON.parse(localStorage.getItem('clicks')) || {} ;
 
   var ans;
   if ($(this).val()) {
@@ -390,13 +390,13 @@ function uuidv4() {
     ans = "none"
   }
 
+  var question = $(this).attr('name');
   var oneClick = {
-    question: $(this).attr('name'),
     answer: ans,
     timestamp: Date.now()
   }
   
-  clicks.push(oneClick)
+  clicks[question]=oneClick;
   localStorage.setItem('clicks', JSON.stringify(clicks));
 });
 
