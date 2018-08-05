@@ -165,7 +165,7 @@
                         <h2 id="submissionTime">
                             Submitted at: 
                         </h2>
-                        <table style="text-center">
+                        <table class="answer-table">
                             <thead>
                                 <tr>
                                     <th>
@@ -295,6 +295,10 @@ function uuidv4() {
 }
 
 
+function readISODateString(d) {
+  return (new Date(d)).toString();
+}
+
         </script>
         <script type="text/javascript">
             (function examGetScopeWrapper($) {
@@ -334,7 +338,7 @@ function uuidv4() {
         examData = results;
         console.log(examData);
         document.getElementById('testName').innerHTML += examData.ExamNumber;
-        document.getElementById('submissionTime').innerHTML += examData.submitTime;
+        document.getElementById('submissionTime').innerHTML += readISODateString(examData.submitTime);
         examData.Answers.forEach(function(ans){
           //TODO hardcoding parsing of section and question, this should just be in the json object
           sectionNum = ans.name[2];
