@@ -41,11 +41,9 @@ WorldScholars.map = WorldScholars.map || {};
         allExams.Exams.forEach(function(oneExam){
           //TODO hardcoding parsing of section and question, this should just be in the json object
           slash = "/";
-          if (ans.value!="0.00"){
-            newRow = ('<tr><td>' + oneExam.ExamNumber + '<'+slash+'td><td>' + oneExam.submitTime + '<'+slash+'td>'+
-                '<td> <a href=\"/examsummary.html?id=' + oneExam.ExamId + '\">Results<'+slash+'</a>'+'<'+slash+'td><'+slash+'tr>');
-            $('tbody').append(newRow);
-          }
+          newRow = ('<tr><td>' + oneExam.ExamNumber + '<'+slash+'td><td>' + oneExam.submitTime + '<'+slash+'td>'+
+              '<td> <a href=\"/examsummary.html?id=' + oneExam.ExamId + '\">Results<'+slash+'</a>'+'<'+slash+'td><'+slash+'tr>');
+          $('tbody').append(newRow);
         });
 
 
