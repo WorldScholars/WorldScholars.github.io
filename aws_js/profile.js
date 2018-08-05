@@ -38,7 +38,7 @@ WorldScholars.map = WorldScholars.map || {};
 
     function listExamsInHtml(allExams) {
         console.log(allExams);
-        allExams.forEach(function(oneExam){
+        allExams.Exams.forEach(function(oneExam){
           //TODO hardcoding parsing of section and question, this should just be in the json object
           slash = "/";
           if (ans.value!="0.00"){
