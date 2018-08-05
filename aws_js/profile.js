@@ -27,7 +27,7 @@ WorldScholars.map = WorldScholars.map || {};
                 Authorization: authToken
             },
             contentType: 'application/json',
-            success: completeRequest,
+            success: listExamsInHtml,
             error: function ajaxError(jqXHR, textStatus, errorThrown) {
                 console.error('Error reading exams from database: ', textStatus, ', Details: ', errorThrown);
                 console.error('Response: ', jqXHR.responseText);
