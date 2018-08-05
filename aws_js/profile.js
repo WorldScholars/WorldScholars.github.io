@@ -9,7 +9,7 @@ WorldScholars.map = WorldScholars.map || {};
         if (token) {
             authToken = token;
         } else {
-            if (window.location.pathname != "/signin.html" && window.location.origin != "file://"){
+            if (window.location.pathname != "/signin.html" && window.location.pathname != "/signup.html" && window.location.origin != "file://"){
                 window.location.href = '/signin.html';
             }
         }
