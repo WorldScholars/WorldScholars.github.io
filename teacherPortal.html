@@ -177,25 +177,25 @@
                             Welcome teacher 
                         </h1>
                         <h2 id="whichExam">
-                            Showing results for Exam #
+                            Showing results (# wrong) for Exam #
                         </h2>
                         <table class="answer-table">
                             <thead>
                                 <tr>
                                     <th>
-                                        Section
+                                        Student
                                     </th>
                                     <th>
-                                        Question
+                                        Section 1
                                     </th>
                                     <th>
-                                        Answer
+                                        Section 2
                                     </th>
                                     <th>
-                                        Correct Answer
+                                        Section 3 
                                     </th>
                                     <th>
-                                        Question Type
+                                        Section 4
                                     </th>
                                 </tr>
                             </thead>
@@ -368,7 +368,7 @@ WorldScholars.map = WorldScholars.map || {};
     function examSummaryInHtml(data) {
         data.allSummaries.forEach(function(oneExam){
           slash = "/";
-          newRow = ('<tr><td>' + oneExam.StudentId+ '<'+slash+'td>
+          newRow = ('<tr><td>' + oneExam.StudentId+ '<'+slash+'td>' +
                     '<td>' + oneExam.Section_1 + '<'+slash+'td>'+
                     '<td>' + oneExam.Section_2 + '<'+slash+'td>'+
                     '<td>' + oneExam.Section_3 + '<'+slash+'td>'+
@@ -384,6 +384,7 @@ WorldScholars.map = WorldScholars.map || {};
     $(function onDocReady() {
         var useremail = WorldScholars.user.username;
         if (window.location.pathname=="/teacherPortal.html" 
+            //this is so insecure its not even funny, move this to server side
             && useremail.endsWith("-at-worldscholars.global")){
           document.getElementById('teacherWelcome').innertHTML += useremail;
           document.getElementById('whichExam').innertHTML += getUrlParameter('examNum');
