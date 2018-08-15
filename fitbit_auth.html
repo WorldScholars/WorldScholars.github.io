@@ -29,6 +29,20 @@
         gtag('config', 'UA-111625545-1');
         </script>
 
+        <script type="text/javascript" src="aws_js/vendor/jquery-3.1.0.js">
+        </script>
+        <script type="text/javascript" src="aws_js/vendor/bootstrap.min.js">
+        </script>
+        <script type="text/javascript" src="aws_js/vendor/aws-cognito-sdk.min.js">
+        </script>
+        <script type="text/javascript" src="aws_js/vendor/amazon-cognito-identity.min.js">
+        </script>
+        <script type="text/javascript" src="aws_js/config.js">
+        </script>
+        <script type="text/javascript" src="aws_js/cognito-auth.js">
+        </script>
+        <script type="text/javascript" src="aws_js/profile.js">
+        </script>
     </head>
     <body>
         <header id="header">
@@ -131,34 +145,33 @@
                                     FAQ
                                 </a>
                             </li>
-                            <li>
-                                <a href="signin.html">
-                                    Sign in
+                            <li class="dropdown">
+                                <a href="profile.html">
+                                    Profile
+                                    <i class="fa fa-angle-down">
+                                    </i>
                                 </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="profile.html">
+                                            My Exams
+                                        </a>
+                                    </li>
+                                    <li id="signOut">
+                                        <a href="#">
+                                            Sign out
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </header>
-        <section id="about-person" class="padding-top wow fadeInUp" data-wow-duration="400ms" data-wow-delay="400ms">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <img src="images/headshots/TMurphy.jpg" class="margin-bottom" style="width:25%" alt="">
-                        <h1 class="margin-bottom" style="text-center">
-                            Thomas Murphy
-                        </h1>
-                        <h3 class="margin-bottom">
-                            Success and Degrees
-                        </h3>
-                        <p>
-                            Tom Murphy is a software engineer based in New York City. He has worked at companies both large and small, from small successful startups (one a credit card company processing over a billion dollars of transactions per year), to mid-size organizations like Brown University, to large companies like The New York Times. He is an expert in functional programming and concurrency. He develops web servers for rich web applications, as well as highly-concurrent applications for data and media exchange in the cloud. Tom is an alumni of The Recurse Center, known as &quot;the best programming community in the world&quot;.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <p>
+            saving your fitbit auth credentials to the database... This allows us to make cool graphs for you
+        </p>
         <footer id="footer">
             <div class="container">
                 <div class="row">
