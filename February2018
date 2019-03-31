@@ -29,20 +29,6 @@
         gtag('config', 'UA-111625545-1');
         </script>
 
-        <script type="text/javascript" src="aws_js/vendor/jquery-3.1.0.js">
-        </script>
-        <script type="text/javascript" src="aws_js/vendor/bootstrap.min.js">
-        </script>
-        <script type="text/javascript" src="aws_js/vendor/aws-cognito-sdk.min.js">
-        </script>
-        <script type="text/javascript" src="aws_js/vendor/amazon-cognito-identity.min.js">
-        </script>
-        <script type="text/javascript" src="aws_js/config.js">
-        </script>
-        <script type="text/javascript" src="aws_js/cognito-auth.js">
-        </script>
-        <script type="text/javascript" src="aws_js/profile.js">
-        </script>
     </head>
     <body>
         <header id="header">
@@ -150,103 +136,109 @@
                                     FAQ
                                 </a>
                             </li>
-                            <li class="dropdown">
-                                <a href="profile.html">
-                                    Profile
-                                    <i class="fa fa-angle-down">
-                                    </i>
+                            <li>
+                                <a href="signin.html">
+                                    Sign in
                                 </a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="profile.html">
-                                            My Exams
-                                        </a>
-                                    </li>
-                                    <li id="signOut">
-                                        <a href="#">
-                                            Sign out
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </header>
-        <section id="Profile" class="wow fadeInUp" data-wow-duration="400ms">
+        <section id="about-Intercultural Exchange through the Lens of Liberal Arts" class="padding-top wow fadeInUp" data-wow-duration="400ms" data-wow-delay="400ms">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <h1 class="margin-bottom">
-                            Your account
+                        <img src="images/home/winter-campus.jpg" class="margin-bottom" style="width:40%" style="min-width:250px" alt="">
+                        <h1 class="margin-bottom" style="text-center">
+                            Intercultural Exchange through the Lens of Liberal Arts
                         </h1>
-                        <p id="username">
-                            
-                        </p>
-                        <p class="alert alert-info">
-                            Last day of world scholars! New students, please take the following survey: 
-                            <a href="https://tccolumbia.qualtrics.com/jfe/form/SV_eEdYpMKnmRKfgUt">
-                                https://tccolumbia.qualtrics.com/jfe/form/SV_eEdYpMKnmRKfgUt
-                            </a>
-                        </p>
-                        <p class="alert alert-info">
-                            Two week students, please take the following survey: 
-                            <a href="https://tccolumbia.qualtrics.com/jfe/form/SV_bjy9bkujBdmY2Fv">
-                                https://tccolumbia.qualtrics.com/jfe/form/SV_bjy9bkujBdmY2Fv
-                            </a>
-                        </p>
-                        <p>
-                            If you haven&#39;t already done so, please 
-                            <a href="https://www.fitbit.com/oauth2/authorize?client_id=22CYBG&amp;response_type=token&amp;scope=activity%20nutrition%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&amp;expires_in=31536000">
-                                grant us permissions to you FitBit data.
-                            </a>
-                            This will allow us to make cool graphs for you. Just follow the link, select &quot;Allow All&quot; (you may need to de-select and select again) and click &quot;Allow&quot;.
-                        </p>
-                        <p>
-                            Take 
-                            <a href="/scantron.html?tNum=3">
-                                Practice Test #3
-                            </a>
-                        </p>
-                        <p>
-                            Take 
-                            <a href="/scantron.html?tNum=4">
-                                Practice Test #4
-                            </a>
-                        </p>
-                        <p>
-                            Take 
-                            <a href="/scantron.html?tNum=5">
-                                Practice Test #5
-                            </a>
-                        </p>
-                        <p>
-                            Take 
-                            <a href="/scantron.html?tNum=6">
-                                Practice Test #6
-                            </a>
-                        </p>
-                        <h2>
-                            Your past Exams
+                        <h2 class="margin-bottom" style="text-center">
+                            February 2018
                         </h2>
-                        <table class="answer-table">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        Exam Number
-                                    </th>
-                                    <th>
-                                        Submission Time
-                                    </th>
-                                    <th>
-                                        Link to results
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
+                        <div style="padding-left:12%;padding-right:12%;text-align:left">
+                            <p style="color:red">
+                                Due to number of high quality applicants requesting financial aid, this program has been postponed while we organize to provide adequate assistance for all qualified students. Stay tuned for updates!
+                            </p>
+                            <p>
+                                This two week program runs from February 11 - February 24, 2018. It brings together students from 5 different countries, and a broad spectrum of socio-economic backgrounds to provide a multicultural, diverse, and unique educational experience. Some of the program highlights are listed below. The application deadline is January 12. Applicants will be notified of acceptance by January 15. Due to the small discussion style classes, this program is limited to 20 participants.
+                            </p>
+                            <br>
+                            <p>
+                                Program cost is $2199 USD, which includes tuition, events, special dinners, and all domestic travel. This does not include international travel and room and board. Some need-based scholarships are available. For more information please make a note on your application, or reach out to us via email at 
+                            </p>
+                            <a href="mailto:fiona@worldscholars.global">
+                                fiona@worldscholars.global
+                            </a>
+                        </div>
+                        <div class="margin-bottom">
+                        </div>
+                        <div class="margin-bottom" style="padding-left:12%;padding-right:12%;text-align:left">
+                            <h2 style="color:red">
+                                Due to number of high quality applicants requesting financial aid, this program has been postponed while we organize to provide adequate assistance for all qualified students. Stay tuned for updates!
+                            </h2>
+                            <blockquote>
+                                A human being should be able to change a diaper, plan an invasion, butcher a hog, conn a ship, design a building, write a sonnet, balance accounts, build a wall, set a bone, comfort the dying, take orders, give orders, cooperate, act alone, solve equations, analyze a new problem, pitch manure, program a computer, cook a tasty meal, fight efficiently, die gallantly.
+                                <em>
+                                    Specialization is for insects.
+                                </em>
+                                - Robert Heinlein, Time Enough for Love
+                            </blockquote>
+                            <section id="features">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="single-features">
+                                            <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                                                <h2>
+                                                    Classes
+                                                </h2>
+                                                <p>
+                                                    Our classes examine a wide range of topics from a multicultural lens to prepare students to make the leap from a student of the classroom to a student of life. Our lecturers expect students to step outside of their comfort zone and make unexpected connections with a diverse group of peers. Students should be prepared to fully engage in discussion style teaching. Some topics from previous programs include &quot;The Science of Business&quot;, &quot;Education Across Cultures&quot;, &quot;Computer Science Without Computers&quot;, and &quot;The Methodology of Philosophy&quot;. Our roster of instructors is continually updated - a final schedule will be released as the program start date nears.
+                                                </p>
+                                            </div>
+                                            <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                                                <img src="images/programs/feb2017/aaronClass.jpg" class="img-responsive" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="single-features">
+                                            <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                                                <img src="images/home/skyline.JPG" class="img-responsive" alt="">
+                                            </div>
+                                            <div class="col-sm-6 col-sm-offset-1 align-left wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                                                <h2>
+                                                    Trips to Boston and New York
+                                                </h2>
+                                                <p>
+                                                    Led by World Scholars&#39; staff members, our students will visit both the professional and educational institutions in Boston and New York City, one of the world&#39;s major commercial, financial, and cultural centers. The organizations we visited in the past include Goldman Sachs, JP Morgan Chase, Columbia University, and Metropolitan Museum of Arts. This trip will take place at the end of the program, the weekend before students return home.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="single-features">
+                                            <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                                                <h2>
+                                                    Evening Activities
+                                                </h2>
+                                                <p>
+                                                    Evening activities are designed to complement the program to give students a truly well-rounded education. Evening activities are paired with lectures during the day from experts in the field, exposing students to the theory and practice behind the events of the evening. This year&#39;s activities will include a guided tour of the Natural History Museum, a play at the Yale Repertory Theater, seeing a Yale vs Quinnipiac Hockey game, and a performance by the Yale Concert Band. Attending these extracurricular events gives students a deep cultural experience in the liberal arts.
+                                                </p>
+                                            </div>
+                                            <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                                                <img src="images/home/evening.JPG" class="img-responsive" alt="">
+                                            </div>
+                                        </div>
+                                        <h1 class="margin-bottom">
+                                            Deadline to apply was January 12
+                                        </h1>
+                                        <object data="https://adobeindd.com/view/publications/6803dbf4-7962-4ae1-a831-2a37731f629a/wt7o/publication-web-resources/pdf/WS_February_Brochure_v2.pdf" type="application/pdf" width="88%" height="900px">
+                                            <a href="https://indd.adobe.com/view/6803dbf4-7962-4ae1-a831-2a37731f629a">
+                                                Download a brochure
+                                            </a>
+                                        </object>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
