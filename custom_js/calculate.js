@@ -559,11 +559,12 @@ CompositePercent["600"] = 1;
 function score(mathRaw, readingRaw, writingRaw) {
   
   var finalScore = {}
-  finalScore.mathScaled = mathScore[mathRaw.toString()]
+  finalScore.mathScaled = mathScore[mathRaw.toString()] || 0
+  console.log(finalScore.mathScaled)
   finalScore.mathPercentile = mathScorePercent[finalScore.mathScaled.toString()]
-  finalScore.readingScaled = readingScore[readingRaw.toString()]
+  finalScore.readingScaled = readingScore[readingRaw.toString()] || 0
   finalScore.readingPercentile = readingScorePercent[finalScore.readingScaled.toString()]
-  finalScore.writingScaled = writingScore[writingRaw.toString()]
+  finalScore.writingScaled = writingScore[writingRaw.toString()] || 0
   finalScore.writingPercentile = writingScorePercent[finalScore.writingScaled.toString()]
  
   finalScore.total = mathScaled + readingScaled + writingScaled
