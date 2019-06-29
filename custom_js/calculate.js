@@ -560,11 +560,11 @@ function score(mathRaw, readingRaw, writingRaw) {
   
   var finalScore = {}
   finalScore.mathScaled = mathScore[mathRaw.toString()]
-  finalScore.mathPercentile = mathScorePercent[mathScaled.toString]
-  finalScore.readingScaled = readingScore[readingRaw.toString]
-  finalScore.readingPercentile = readingScorePercent[readingScaled.toString]
-  finalScore.writingScaled = writingScore[writingRaw.toString]
-  finalScore.writingPercentile = writingScorePercent[writingScaled.toString]
+  finalScore.mathPercentile = mathScorePercent[finalScore.mathScaled.toString()]
+  finalScore.readingScaled = readingScore[readingRaw.toString()]
+  finalScore.readingPercentile = readingScorePercent[finalScore.readingScaled.toString()]
+  finalScore.writingScaled = writingScore[writingRaw.toString()]
+  finalScore.writingPercentile = writingScorePercent[finalScore.writingScaled.toString()]
  
   finalScore.total = mathScaled + readingScaled + writingScaled
  
